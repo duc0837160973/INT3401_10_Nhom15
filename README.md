@@ -1,2 +1,87 @@
-# INT3401_10_Nhom15
-Project 1 + Project 2
+# Pacman – Search & Multiagent Search
+
+## Mô tả dự án
+
+Dự án triển khai các thuật toán trí tuệ nhân tạo trong môi trường Pacman, dựa trên bộ bài tập UC Berkeley CS188, gồm hai phần:
+
+- **Project 1 – Search:** Cài đặt DFS, BFS, UCS và A* để tìm đường đến đích, đi qua bốn góc và thu thập thức ăn. Xây dựng các heuristic hỗ trợ tìm kiếm hiệu quả.
+- **Project 2 – Multiagent Search:** Cài đặt Reflex Agent, Minimax, Alpha–Beta và Expectimax để Pacman lựa chọn hành động khi có ma. Xây dựng hàm đánh giá trạng thái dựa trên thức ăn, viên năng lượng và khoảng cách tới ma.
+
+Mã nguồn chính: `search.py`, `searchAgents.py` và `multiAgents.py`.
+
+## Hướng dẫn chạy lại chương trình
+
+### 1. Chuẩn bị
+
+Cài đặt **Python 3**, tải repository và giải nén. Giữ đầy đủ các tệp của bộ khung Pacman, bản đồ và bộ kiểm thử.
+
+Mở terminal trong thư mục chứa `pacman.py` của project tương ứng. Nếu máy sử dụng lệnh `python3`, thay `python` bằng `python3` trong các lệnh dưới đây.
+
+### 2. Project 1 – Search
+
+Chạy lần lượt các thuật toán trên bản đồ `mediumMaze`:
+
+```bash
+python pacman.py -l mediumMaze -p SearchAgent -a fn=dfs
+python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
+python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
+python pacman.py -l mediumMaze -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+```
+
+Chạy bài toán đi qua bốn góc:
+
+```bash
+python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+python pacman.py -l mediumCorners -p AStarCornersAgent
+```
+
+Chạy bài toán thu thập thức ăn:
+
+```bash
+python pacman.py -l trickySearch -p AStarFoodSearchAgent
+python pacman.py -l bigSearch -p ClosestDotSearchAgent -z 0.5
+```
+
+### 3. Project 2 – Multiagent Search
+
+Chạy demo Expectimax với hàm đánh giá cải tiến:
+
+```bash
+python pacman.py -p ExpectimaxAgent -a depth=2,evalFn=better -l smallClassic -k 1
+```
+
+Chạy lại thực nghiệm so sánh các agent, mỗi cấu hình gồm 10 ván:
+
+```bash
+python pacman.py -p ReflexAgent -l smallClassic -k 1 -n 10 -q -f
+python pacman.py -p MinimaxAgent -a depth=2 -l smallClassic -k 1 -n 10 -q -f
+python pacman.py -p AlphaBetaAgent -a depth=2 -l smallClassic -k 1 -n 10 -q -f
+python pacman.py -p ExpectimaxAgent -a depth=2 -l smallClassic -k 1 -n 10 -q -f
+python pacman.py -p ExpectimaxAgent -a depth=2,evalFn=better -l smallClassic -k 1 -n 10 -q -f
+```
+
+Trong các lệnh trên:
+- `-l`: bản đồ sử dụng.
+- `-p`: agent điều khiển Pacman.
+- `-k 1`: một ma.
+- `-n 10`: chạy 10 ván.
+- `-q`: không hiển thị giao diện.
+- `-f`: sử dụng seed ngẫu nhiên cố định.
+- `depth=2`: độ sâu tìm kiếm bằng 2.
+- `evalFn=better`: sử dụng hàm đánh giá cải tiến.
+
+Bỏ `-q` nếu muốn xem giao diện trò chơi.
+
+### 4. Kiểm thử tự động
+
+Chạy lệnh sau trong thư mục của từng project:
+
+```bash
+python autograder.py --no-graphics
+```
+
+Để kiểm thử riêng một câu, ví dụ Q5:
+
+```bash
+python autograder.py -q q5 --no-graphics
+```
