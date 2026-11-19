@@ -6,7 +6,28 @@ Dự án triển khai các thuật toán trí tuệ nhân tạo trong môi trư�
 
 - **Project 1 – Search:** Cài đặt DFS, BFS, UCS và A* để tìm đường đến đích, đi qua bốn góc và thu thập thức ăn. Xây dựng các heuristic hỗ trợ tìm kiếm hiệu quả.
 - **Project 2 – Multiagent Search:** Cài đặt Reflex Agent, Minimax, Alpha–Beta và Expectimax để Pacman lựa chọn hành động khi có ma. Xây dựng hàm đánh giá trạng thái dựa trên thức ăn, viên năng lượng và khoảng cách tới ma.
+### Project 1 – Search: Các câu hỏi
 
+| Câu | Nội dung |
+|---|---|
+| **Q1 – DFS** | Cài đặt tìm kiếm theo chiều sâu để tìm đường từ vị trí ban đầu đến đích. |
+| **Q2 – BFS** | Cài đặt tìm kiếm theo chiều rộng để tìm đường có số bước ít nhất. |
+| **Q3 – UCS** | Cài đặt tìm kiếm theo chi phí đồng nhất để tìm đường có tổng chi phí nhỏ nhất khi chi phí di chuyển có thể khác nhau. |
+| **Q4 – A\*** | Cài đặt A* kết hợp chi phí đã đi và heuristic ước lượng chi phí còn lại đến đích. |
+| **Q5 – CornersProblem** | Xây dựng biểu diễn trạng thái và điều kiện đích cho bài toán Pacman đi qua cả bốn góc của mê cung. |
+| **Q6 – Corners Heuristic** | Xây dựng heuristic cho CornersProblem để A* giảm số nút mở rộng mà vẫn tìm được lời giải tối ưu. |
+| **Q7 – Food Heuristic** | Xây dựng heuristic cho bài toán thu thập toàn bộ thức ăn, sử dụng cùng A*. |
+| **Q8 – Suboptimal Search** | Cài đặt agent liên tiếp tìm đường đến thức ăn gần nhất bằng BFS; thu thập hết thức ăn nhưng không bảo đảm đường đi tổng thể ngắn nhất. |
+
+### Project 2 – Multiagent Search: Các câu hỏi
+
+| Câu | Nội dung |
+|---|---|
+| **Q1 – Reflex Agent** | Thiết kế hàm đánh giá hành động dựa trên trạng thái sau khi di chuyển, xét thức ăn và ma để lựa chọn hành động phù hợp. |
+| **Q2 – Minimax** | Cài đặt Minimax cho Pacman và nhiều ma: Pacman tối đa hóa giá trị, còn ma tối thiểu hóa giá trị của Pacman. |
+| **Q3 – Alpha–Beta Pruning** | Bổ sung cắt tỉa Alpha–Beta để bỏ qua các nhánh không ảnh hưởng đến kết quả Minimax, giảm lượng tìm kiếm. |
+| **Q4 – Expectimax** | Cài đặt Expectimax, coi ma chọn ngẫu nhiên đều giữa các hành động hợp lệ và sử dụng giá trị kỳ vọng để ra quyết định. |
+| **Q5 – Better Evaluation Function** | Xây dựng hàm đánh giá trạng thái cải tiến, kết hợp điểm số, thức ăn, viên năng lượng, khoảng cách và trạng thái sợ của ma. |
 ## Hướng dẫn chạy lại chương trình
 
 ### 1. Chuẩn bị
