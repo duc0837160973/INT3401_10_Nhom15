@@ -7,8 +7,6 @@ Dự án triển khai các thuật toán trí tuệ nhân tạo trong môi trư�
 - **Project 1 – Search:** Cài đặt DFS, BFS, UCS và A* để tìm đường đến đích, đi qua bốn góc và thu thập thức ăn. Xây dựng các heuristic hỗ trợ tìm kiếm hiệu quả.
 - **Project 2 – Multiagent Search:** Cài đặt Reflex Agent, Minimax, Alpha–Beta và Expectimax để Pacman lựa chọn hành động khi có ma. Xây dựng hàm đánh giá trạng thái dựa trên thức ăn, viên năng lượng và khoảng cách tới ma.
 
-Mã nguồn chính: `search.py`, `searchAgents.py` và `multiAgents.py`.
-
 ## Hướng dẫn chạy lại chương trình
 
 ### 1. Chuẩn bị
