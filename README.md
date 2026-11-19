@@ -5,8 +5,6 @@
 Dự án triển khai các thuật toán trí tuệ nhân tạo trong môi trường Pacman, dựa trên bộ bài tập UC Berkeley CS188, gồm hai phần:
 
 - **Project 1 – Search:** Cài đặt DFS, BFS, UCS và A* để tìm đường đến đích, đi qua bốn góc và thu thập thức ăn. Xây dựng các heuristic hỗ trợ tìm kiếm hiệu quả.
-- **Project 2 – Multiagent Search:** Cài đặt Reflex Agent, Minimax, Alpha–Beta và Expectimax để Pacman lựa chọn hành động khi có ma. Xây dựng hàm đánh giá trạng thái dựa trên thức ăn, viên năng lượng và khoảng cách tới ma.
-### Project 1 – Search: Các câu hỏi
 
 | Câu | Nội dung |
 |---|---|
@@ -19,7 +17,7 @@ Dự án triển khai các thuật toán trí tuệ nhân tạo trong môi trư�
 | **Q7 – Food Heuristic** | Xây dựng heuristic cho bài toán thu thập toàn bộ thức ăn, sử dụng cùng A*. |
 | **Q8 – Suboptimal Search** | Cài đặt agent liên tiếp tìm đường đến thức ăn gần nhất bằng BFS; thu thập hết thức ăn nhưng không bảo đảm đường đi tổng thể ngắn nhất. |
 
-### Project 2 – Multiagent Search: Các câu hỏi
+- **Project 2 – Multiagent Search:** Cài đặt Reflex Agent, Minimax, Alpha–Beta và Expectimax để Pacman lựa chọn hành động khi có ma. Xây dựng hàm đánh giá trạng thái dựa trên thức ăn, viên năng lượng và khoảng cách tới ma.
 
 | Câu | Nội dung |
 |---|---|
